@@ -98,6 +98,6 @@ trait Solver extends GameDef {
    */
   lazy val solution: List[Move] = pathsToGoal.headOption match {
     case None => Nil
-    case Some((_, path)) => path
+    case Some((_, path)) => path.reverse
   }
 }
